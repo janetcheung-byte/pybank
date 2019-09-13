@@ -12,7 +12,7 @@ greatest_decrease_in_profits=0
 with open(csvpath, "r") as csvfile:
     csvreader = csv.reader(csvfile, delimiter=",")
     csv_header = next(csvreader)
-    line_num += 1
+    
     for row in csvreader:
         print(row)
         profit_loss=int(row[1])
