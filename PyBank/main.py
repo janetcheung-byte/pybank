@@ -29,8 +29,19 @@ with open(csvpath, "r") as csvfile:
             greatest_increase_in_profits=profit_loss
         elif profit_loss<greatest_decrease_in_profits:
             greatest_decrease_in_profits=profit_loss
+        
+        output_path='output.txt'
+        with open (output_path,'w') as file:
+            file.write("```text\n")
+            file.write("Financial Analysis\n")
+            file.write("----------------------------\n")
+            file.write(f"Total Months: {total_months}\n")
+            file.write(f"Total: {total}\n")
+            file.write(f"Average  Change: ${average_change}\n")
+            file.write(f"Greatest Increase in Profits: {greatest_increase_in_profits}\n")
+            file.write(f"Greatest Decrease in Profits: {greatest_decrease_in_profits}\n")
             
-    print("```text\n")
+print("```text\n")
 print("Financial Analysis\n")
 print("----------------------------\n")
 print(f"Total Months: {total_months}\n")
@@ -38,16 +49,3 @@ print(f"Total: {total}\n")
 print(f"Average Change: {average_change}\n")
 print(f"Greatest Increase in Profits: {greatest_increase_in_profits}\n")
 print(f"Greatest Decrease in Profits: {greatest_decrease_in_profits}\n")
-
-output_path='output.txt'
-
-with open (output_path,'w') as file:
-    file.write("```text\n")
-    file.write("Financial Analysis\n")
-    file.write("----------------------------\n")
-    file.write(f"Total Months: {total_months}\n")
-    file.write(f"Total: {total}\n")
-    file.write(f"Average  Change: ${average_change}\n")
-    file.write(f"Greatest Increase in Profits: {greatest_increase_in_profits}\n")
-    file.write(f"Greatest Decrease in Profits: {greatest_decrease_in_profits}\n")
-   
